@@ -201,7 +201,18 @@ Ajouter à votre code des commentaires reprenant les explications données dans 
 Recherchez sur le site https://developer.mozilla.org/fr/ les pages de documentation de ce qui a été utilisé dans ce TP :
 
 - `popover` : https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Global_attributes/popover
-- ...
+- `popovertarget` / `popovertargetaction` (sur `<button>`) : https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/button
+- `autofocus` : https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Global_attributes/autofocus
+- `:popover-open` : https://developer.mozilla.org/fr/docs/Web/CSS/:popover-open
+- `:has()` : https://developer.mozilla.org/fr/docs/Web/CSS/:has
+- `overflow` : https://developer.mozilla.org/fr/docs/Web/CSS/overflow
+- `cursor` : https://developer.mozilla.org/fr/docs/Web/CSS/cursor
+- `transition` : https://developer.mozilla.org/fr/docs/Web/CSS/transition
+- `transition-behavior` (`allow-discrete`) : https://developer.mozilla.org/fr/docs/Web/CSS/transition-behavior
+- `opacity` : https://developer.mozilla.org/fr/docs/Web/CSS/opacity
+- `@starting-style` : https://developer.mozilla.org/fr/docs/Web/CSS/@starting-style
+- `transform` / `rotate()` : https://developer.mozilla.org/fr/docs/Web/CSS/transform
+- `prefers-reduced-motion` : https://developer.mozilla.org/fr/docs/Web/CSS/@media/prefers-reduced-motion
 
 # Fin
 

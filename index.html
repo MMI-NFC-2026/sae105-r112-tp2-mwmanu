@@ -12,11 +12,19 @@
   <header class="header header--home">
 
     <!-- Menu principal -->
-    <button class="burger" type="button"  popovertarget="menu" aria-label="Menu">
+    <!-- popovertarget="menu" : ce bouton ouvre/ferme le popover d'id "menu", sans JavaScript.
+         Le menu se ferme aussi avec Échap ou en cliquant en dehors. -->
+    <button class="burger" type="button" popovertarget="menu" aria-label="Menu">
       🍔
     </button>
 
+    <!-- Attribut popover : la nav devient un popover, cachée par défaut.
+         id="menu" : identifiant unique, utilisé par les boutons (popovertarget="menu"). -->
     <nav class="menu" id="menu" popover aria-label="Main menu">
+      <!-- Bouton de fermeture explicite :
+           popovertargetaction="hide" : ce bouton ne fait que fermer le menu.
+           autofocus : le focus est placé sur ce bouton à l'ouverture du menu
+           (accessibilité clavier : appuyer sur Entrée referme le menu). -->
       <button class="menu__close burger burger--close" 
       type="button" 
       popovertarget="menu" 
