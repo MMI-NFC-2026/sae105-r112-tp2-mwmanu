@@ -1,1 +1,23 @@
-/* code css à faire */
+.menu {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  transition: 400ms allow-discrete /* allow-discrete = Le menu apparaît en fondu, mais il disparaît d'un coup */; /* transition = Aucun fondu, tout est instantané */
+  opacity: 0;
+}
+
+.menu:popover-open {
+  opacity: 1;
+} /* le menu doit devenir visible. */
+
+@starting-style { /* Le menu apparaît d'un coup, mais il disparaît en fondu */
+  .menu:popover-open {
+    opacity: 0;
+  } /* le menu commence invisible. */
+}
+html:has(.menu:popover-open) {
+  overflow: hidden;
+}
+.burger {
+  cursor: pointer;
+}
