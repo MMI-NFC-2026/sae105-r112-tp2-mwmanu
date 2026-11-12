@@ -15,12 +15,15 @@
     opacity: 0;
   } /* le menu commence invisible. */
 }
+
 html:has(.menu:popover-open) {
   overflow: hidden;
 }
+
 .burger {
   cursor: pointer;
 }
+
 @starting-style {
   .menu:popover-open .burger--close {
     transform: none;
@@ -30,4 +33,10 @@ html:has(.menu:popover-open) {
 .menu:popover-open .burger--close {
   transform: rotate(90deg);
   transition: 400ms;
+}
+@media (prefers-reduced-motion: reduce) {
+  .menu,
+  .menu .burger--close {
+    transition: none;
+  }
 }
