@@ -217,3 +217,55 @@ Recherchez sur le site https://developer.mozilla.org/fr/ les pages de documentat
 # Fin
 
 N'oubliez pas de Push et publier sur Netlify (URL (publique) du site à mettre en haut).
+
+# TP : arborescence et liens relatifs
+
+Le but est de faire des **liens relatifs (URL relatives)** entre les fichiers.
+
+## Arborescence
+
+```
+|   index.html
++---cats
+|       chat-1.html
+|       chat-2.html
+|       index.html
++---dogs
+|       chien-1.html
+|       chien-2.html
+|       index.html
++---public
+|   +---icones        archive.svg, bag-plus.svg, book.svg
+|   \---img
+|       +---cats      Cat_yawning_in_park.jpg, Cautious_Tabby_Red_Cat.jpg
+|       \---dogs      German_shepherd_(5781199120).jpg, German_shepherd_wanting_to_play.JPG
+\---src
+    +---css           styles.css
+    +---fonts
+    \---js
+```
+
+## Liens relatifs
+
+Une URL relative part **du dossier du fichier qui contient le lien** :
+
+- `chat-2.html` : fichier dans le même dossier ;
+- `cats/index.html` : on descend dans le sous-dossier `cats` ;
+- `../dogs/index.html` : `..` remonte d'un dossier, puis on descend dans `dogs`.
+
+Depuis `index.html` (racine) : `src/css/styles.css`, `cats/chat-1.html`.
+Depuis `cats/chat-1.html` : `../src/css/styles.css`, `../public/img/cats/...`.
+
+Dans le CSS, les `url()` sont relatives **au fichier CSS** (`src/css/styles.css`) :
+on remonte de deux dossiers pour atteindre les icônes : `url("../../public/icones/book.svg")`.
+
+## Commandes Emmet
+
+- `nav>h4{menu}+ul>li*2>a`
+- `ul>li*2>a[href=cats/chat-$.html]{chat $}`
+- `p>lorem`
+
+## Médias
+
+- Icônes (Bootstrap Icons) : https://icones.js.org/
+- Images : https://commons.wikimedia.org/

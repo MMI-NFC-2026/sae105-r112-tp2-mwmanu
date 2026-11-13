@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chien 1</title>
+  <link rel="stylesheet" href="../src/css/styles.css">
+</head>
+
+<body>
+  <header class="header">
+
+    <!-- Menu principal -->
+    <!-- popovertarget="menu" : ce bouton ouvre/ferme le popover d'id "menu", sans JavaScript.
+         Le menu se ferme aussi avec Échap ou en cliquant en dehors. -->
+    <button class="burger" type="button" popovertarget="menu" aria-label="Menu">
+      🍔
+    </button>
+
+    <!-- Attribut popover : la nav devient un popover, cachée par défaut.
+         id="menu" : identifiant unique, utilisé par les boutons (popovertarget="menu"). -->
+    <nav class="menu" id="menu" popover aria-label="Main menu">
+      <!-- Bouton de fermeture explicite :
+           popovertargetaction="hide" : ce bouton ne fait que fermer le menu.
+           autofocus : le focus est placé sur ce bouton à l'ouverture du menu. -->
+      <button class="menu__close burger burger--close"
+      type="button"
+      popovertarget="menu"
+      popovertargetaction="hide"
+      aria-label="Close the menu"
+      autofocus>
+        🍔
+      </button>
+      <!-- Emmet : nav>h4{menu}+ul>li*2>a -->
+      <h4>menu</h4>
+      <ul>
+        <li><a href="../cats/index.html">Les chats</a>
+          <!-- Emmet : ul>li*2>a[href=cats/chat-$.html]{chat $} -->
+          <ul>
+            <li><a href="../cats/chat-1.html">chat 1</a></li>
+            <li><a href="../cats/chat-2.html">chat 2</a></li>
+          </ul>
+        </li>
+        <li><a href="../dogs/index.html">Les chiens</a>
+          <ul>
+            <li><a href="../dogs/chien-1.html">chien 1</a></li>
+            <li><a href="../dogs/chien-2.html">chien 2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <!-- Fin du menu principal -->
+  </header>
+
+  <!-- Contenu principal de la page -->
+  <main>
+    <h1>Chien 1</h1>
+    <img class="media media--fullwidth" src="../public/img/dogs/German_shepherd_(5781199120).jpg" alt="Un berger allemand">
+    <!-- Emmet : p>lorem -->
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam fugit maiores accusamus quisquam ad veritatis
+      officiis numquam ex rem porro, amet sapiente eaque. Rerum excepturi eaque atque ipsa quos mollitia.
+    </p>
+  </main>
+  <!-- Fin du contenu principal -->
+
+</body>
+
+</html>
